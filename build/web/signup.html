@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      overflow: hidden; /* disable scroll */
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      height: 60px;
+      background-color: #176d81;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px; /* space for navbar */
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 20px 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #176d81;
+      text-shadow: 1px 1px 2px #ccc;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #999;
+      border-radius: 6px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #176d81;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0f4d5d;
+    }
+
+    @media (max-height: 600px) {
+      body {
+        overflow-y: auto; /* allow scroll on very short screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">MyWebsite</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="form-container">
+      <h3>Sign Up</h3>
+      <form action="Signup" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="profile">Profile Photo</label>
+          <input type="file" id="profile" name="profile">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+          <label for="cno">Contact No</label>
+          <input type="text" id="cno" name="cno">
+        </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="pass">
+        </div>
+
+        <div class="form-group">
+          <label for="repass">Re-enter Password</label>
+          <input type="password" id="repass" name="repass">
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

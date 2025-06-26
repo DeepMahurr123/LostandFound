@@ -1,0 +1,202 @@
+<html>
+<head>
+    <title>Login - LostAndFound</title>
+    <style>
+        body {
+            background-size: cover;
+            background-image: url("img/bag.jpg");
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 60px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #00BCD4;
+        }
+
+        b {
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 100px; /* adjusted for navbar */
+            width: 30%;
+            height: 60%;
+        }
+
+        .container:hover {
+            border: 1px solid white;
+        }
+
+        .data {
+            padding-top: 15%;
+            color: white;
+            font-size: 20px;
+            font-style: bold;
+            letter-spacing: 1px;
+            border-radius: 3px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            padding-left: 8%;
+            height: 12%;
+            margin-top: 22px;
+            width: 90%;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            border: 1px solid #dbdbdb;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        input[type="email"]:hover,
+        input[type="password"]:hover {
+            border: 1px solid black;
+        }
+
+        .input-1 {
+            color: red;
+            position: absolute;
+            font-size: 15px;
+            top: 68%;
+            font-weight: bold;
+            padding-left: -3%;
+            text-decoration: none;
+        }
+
+        input[type="submit"] {
+            width: 30%;
+            height: 13%;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-style: bold;
+            margin-top: 18px;
+            color: white;
+            cursor: pointer;
+            background-color: #008CBA;
+        }
+
+        input[type="submit"]:hover {
+            background-color: red;
+        }
+
+        img {
+            width: 100px;
+            top: 8%;
+            left: 46%;
+            border-radius: 75px;
+            position: absolute;
+        }
+
+        .container1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 2%;
+            width: 23%;
+            height: 6%;
+            margin: 10px auto;
+            padding: 20px 50px;
+        }
+
+        .input-2 {
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            color: red;
+            word-spacing: 1px;
+            letter-spacing: 1px;
+        }
+
+        .container1:hover {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('message');
+    if (message) {
+        alert(message);  // Show the "Login first" message
+    }
+</script>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Lost & Found</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <center>
+        <form action="Login" method="post">
+            <div class="container">
+                <div class="data">
+                    <img src="trans.png">
+                    <input type="email" placeholder="Email address" name="email" required><br><br>
+                    <input type="password" placeholder="Password" name="pass"><br><br>
+                    <a href="forget.jsp" class="input-1">Forgot Password?</a>
+                    <input type="submit" name="submit" value="Login">
+                </div>
+            </div>
+        </form>
+        <div class="container1">
+            <b>Don't have an account?</b><a href="signup.html" class="input-2"> Sign up</a>
+        </div>
+    </center>
+</body>
+</html>
